@@ -1,4 +1,4 @@
-package note_back_end.note;
+package note.note;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

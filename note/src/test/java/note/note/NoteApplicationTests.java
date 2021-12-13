@@ -1,4 +1,4 @@
-package note_back_end.note;
+package note.note;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
