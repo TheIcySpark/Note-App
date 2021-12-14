@@ -8,11 +8,11 @@
 		<version>2.6.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>note</groupId>
+	<groupId>backend</groupId>
 	<artifactId>note</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>note</name>
-	<description>Note app backend</description>
+	<description>Note backend</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
