@@ -28,8 +28,8 @@
 
 		<dependency>
 			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-mxj-db-files</artifactId>
-			<version>5.0.12</version>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 
 		<dependency>
