@@ -1,7 +1,7 @@
 import React from "react";
 import GoogleLogin from "react-google-login";
 
-export default class Login extends React.Component{
+export default class LoginButton extends React.Component{
 
     constructor(props){
         super(props);
@@ -11,13 +11,14 @@ export default class Login extends React.Component{
 
     }
 
-    
-    onLoginSucces = (googleResponse) =>{
-        console.log('Login succes: ', googleResponse.profileObj);
+    onLoginSuccess(){
+        console.log('LoginButton');
+        this.props.handleLogin();
     }
 
-    onLoginFailure = (googleResponse) =>{
-        console.log('Login Failure: ', googleResponse);
+    
+    onLoginFailure = (error) =>{
+        console.log('Login Failure: ', error);
     }
     
 
@@ -26,7 +27,7 @@ export default class Login extends React.Component{
             <GoogleLogin
                 clientId="149011605987-vv0vmgme5uraqqe1722fckafj8ttu9v2.apps.googleusercontent.com"
                 buttonText="Login"
-                onSuccess={this.onLoginSucces}
+                onSuccess={this.onLoginSuccess}
                 onFailure={this.onLoginFailure}
                 cookiePolicy={'single_host_origin'}
                 isSignedIn={true}

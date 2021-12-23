@@ -1,9 +1,9 @@
 import './App.css';
-import Home from './home/Home';
+import LoginControl from './login/LoginControl';
 
 function App() {
     return (
-        <Home></Home>
+        <LoginControl/>
     );
 }
     
