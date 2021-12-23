@@ -13,7 +13,6 @@ export default class LoginControl extends React.Component{
 
 
     handleLogin(){
-        console.log('handleLogin');
         this.setState({isLoggedIn: true});
     }
 
@@ -24,11 +23,11 @@ export default class LoginControl extends React.Component{
     render(){
         if(this.state.isLoggedIn){
             return(
-                <LogoutButon handleLogout = {this.handleLogin}/>
+                <LogoutButon handleLogout = {this.handleLogout}/>
             );
         }else{
             return(
-                <LoginButton handleLogin = {this.handleLogout} />
+                <LoginButton handleLogin = {this.handleLogin} />
             );
         }
     }

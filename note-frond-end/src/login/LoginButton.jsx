@@ -11,11 +11,6 @@ export default class LoginButton extends React.Component{
 
     }
 
-    onLoginSuccess(){
-        console.log('LoginButton');
-        this.props.handleLogin();
-    }
-
     
     onLoginFailure = (error) =>{
         console.log('Login Failure: ', error);
@@ -27,7 +22,7 @@ export default class LoginButton extends React.Component{
             <GoogleLogin
                 clientId="149011605987-vv0vmgme5uraqqe1722fckafj8ttu9v2.apps.googleusercontent.com"
                 buttonText="Login"
-                onSuccess={this.onLoginSuccess}
+                onSuccess={this.props.handleLogin}
                 onFailure={this.onLoginFailure}
                 cookiePolicy={'single_host_origin'}
                 isSignedIn={true}
