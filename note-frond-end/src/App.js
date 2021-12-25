@@ -1,9 +1,10 @@
 import './App.css';
-import Home from './home/Home';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import LoginControl from './login/LoginControl';
 
 function App() {
     return (
-        <Home></Home>
+        <LoginControl/>
     );
 }
     
