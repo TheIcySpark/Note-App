@@ -2,15 +2,6 @@ import React from "react";
 import GoogleLogin from "react-google-login";
 
 export default class LoginButton extends React.Component{
-
-    constructor(props){
-        super(props);
-    }
-
-    componentDidMount(){
-
-    }
-
     
     onLoginFailure = (error) =>{
         console.log('Login Failure: ', error);

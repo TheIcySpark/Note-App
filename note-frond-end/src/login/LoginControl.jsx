@@ -1,6 +1,8 @@
 import React from 'react';
+import Workspace from '../workspace/Workspace';
 import LoginButton from './LoginButton';
 import LogoutButon from './LogoutButton';
+import NotLoggedinClass from './NotLoggedinHome';
 
 export default class LoginControl extends React.Component{
     constructor(props){
@@ -13,21 +15,27 @@ export default class LoginControl extends React.Component{
 
 
     handleLogin(){
-        this.setState({isLoggedIn: true});
+        this.setState({isLoggedin: true});
     }
 
     handleLogout(){
-        this.setState({isLoggedIn: false});
+        this.setState({isLoggedin: false});
     }
 
     render(){
         if(this.state.isLoggedin){
             return(
-                <LogoutButon handleLogout = {this.handleLogout}/>
+                <div>
+                    <LogoutButon handleLogout = {this.handleLogout}/>
+                    <Workspace></Workspace>
+                </div>
             );
         }else{
             return(
-                <LoginButton handleLogin = {this.handleLogin} />
+                <div>
+                    <LoginButton handleLogin = {this.handleLogin} />
+                    <NotLoggedinClass></NotLoggedinClass>
+                </div>
             );
         }
     }

@@ -2,14 +2,7 @@ import React from "react";
 import {GoogleLogout} from "react-google-login";
 
 export default class LogoutButon extends React.Component{
-    constructor(props){
-        super(props);
-    }
-
-    componentDidMount(){
-
-    }
-
+    
     onLogoutFailure = (error) =>{
         console.log(error);
     }
