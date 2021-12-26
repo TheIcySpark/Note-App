@@ -26,8 +26,7 @@ export default class LoginControl extends React.Component{
         if(this.state.isLoggedin){
             return(
                 <div>
-                    <LogoutButon handleLogout = {this.handleLogout}/>
-                    <Workspace></Workspace>
+                    <Workspace handleLogout = {this.handleLogout} ></Workspace>
                 </div>
             );
         }else{
