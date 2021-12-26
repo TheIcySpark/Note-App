@@ -19,9 +19,8 @@ export default class Workspace extends React.Component{
 
     handleNewNote(){
         let updatedNotes = [...this.state.notes];
-        updatedNotes.push(1);
+        updatedNotes.push(updatedNotes.length);
         this.setState({notes: updatedNotes})
-        console.log("New Note");
     }
     
     render() {
@@ -30,11 +29,22 @@ export default class Workspace extends React.Component{
             height: '95vh'
         }
         const allNotes = this.state.notes.map((note) =>
-            <button key={note} type="button" className="btn btn-dark w-100">
+        <div key={note} className="w-100">
+            <button type="button" 
+            className="btn btn-dark w-100">
                 <i className="fas fa-sticky-note"></i>
             </button>
+            <div className="btn-group w-100" role={"group"}>
+                <button type="button" className="btn-primary w-100">
+                    <i className="fas fa-info-circle"></i>
+                </button>
+                <button type="button" className="btn-danger w-100">
+                    <i className="fas fa-trash-alt"></i>
+                </button>
+            </div>
+            <hr></hr>
+        </div>
         );
-        console.log("render");
         return (
             <div>
                 <div className="container-fluid">
