@@ -20,7 +20,19 @@ export default class Workspace extends React.Component{
     handleNewNote(){
         let updatedNotes = [...this.state.notes];
         updatedNotes.push(updatedNotes.length);
-        this.setState({notes: updatedNotes})
+        this.setState({notes: updatedNotes});
+    }
+
+    handleNoteButton(){
+        fetch('http://localhost:8080/api/user/list',{
+            method: "GET",
+        })
+        .then((response)=>{
+            return response.json()
+        })
+        .then((data) =>{
+            console.log(data)
+        })
     }
     
     render() {
@@ -30,7 +42,7 @@ export default class Workspace extends React.Component{
         }
         const allNotes = this.state.notes.map((note) =>
         <div key={note} className="w-100">
-            <button type="button" 
+            <button type="button" onClick={this.handleNoteButton}
             className="btn btn-dark w-100">
                 <i className="fas fa-sticky-note"></i>
             </button>
