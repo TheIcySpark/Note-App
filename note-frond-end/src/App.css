@@ -1,17 +1,41 @@
+
+.titulo{
+  font-family: 'Showcard Gothic';
+  text-align: center;
+  padding: 20px;
+  color: transparent;
+  background-color:   #07a099 ;
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 25px, rgba(255, 255, 255, .5) 25px, rgba(255, 255, 255, .5) 50px);    
+  background-clip: text;
+  animation: color 50s linear infinite;
+  background-size: 200%;    
+
+}
+@keyframes color {
+  from {
+      background-position: 0% 50%;
+  }
+
+  to {
+      background-position: 100% 50%;
+  }
+}
+
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 10vmin;
+  border-radius: 20px;
+  margin-left: 20px;
+  
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.App-logo:hover{
+    animation: App-logo-spin .6s linear;
   }
-}
+
 
 .App-header {
   background-color: #282c34;
